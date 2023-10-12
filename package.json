@@ -12,11 +12,8 @@
     "clean": "rm -rf ./circuits/build ticket.json result.json",
     "load-voter-data": "node ./scripts/utils/genVoterData.js",
     "start-poll": "npm run build && npm run setup && npm run generate-solidity && npm run load-voter-data",
-    "poststart-poll": "touch tmp.json && jq . voter.json > tmp.json && mv tmp.json voter.json",
     "download-ticket": "node ./scripts/getTicket.js",
-    "postdownload-ticket": "touch tmp.json && jq . ticket.json > tmp.json && mv tmp.json ticket.json",
-    "vote": "node ./scripts/vote.js",
-    "postvote": "touch tmp.json && jq . result.json > tmp.json && mv tmp.json result.json"
+    "vote": "node ./scripts/vote.js"
   },
   "author": "Advaita Saha",
   "license": "MIT",

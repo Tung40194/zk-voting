@@ -3,7 +3,7 @@ const fs = require('fs');
 //var QRCode = require('qrcode');
 
 async function download(proof, filename) {
-    var jsonObj = JSON.stringify(proof, null);
+    var jsonObj = JSON.stringify(proof, null, 2);
     
     try {
         //QRCode.toFile(`${appRoot}/${filename}.png`, jsonObj);
